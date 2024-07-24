@@ -51,10 +51,13 @@ pip install -r requirements.txt
 3. Download models to ComfyUI\models\inspyrinet
 
 ```
-   latest.pth (rename to ckpt_base.pth): https://drive.google.com/file/d/13oBl5MTVcWER3YU4fSxW3ATlVfueFQPY/view?usp=sharing
-   InSPyReNet_SwinB_HU:                  https://drive.google.com/file/d/1HB02tiInEgo-pNzwqyvyV6eSN1Y2xPRJ/view?usp=sharing
-   InSPyReNet_SwinB_DIS5K:               https://drive.google.com/file/d/1aCxHMbhvj8ah77jXVgqvqImQA_Y0G-Yg/view?usp=sharing
-   Plus_Ultra:                           https://drive.google.com/file/d/13oBl5MTVcWER3YU4fSxW3ATlVfueFQPY/view?usp=sharing
+   ckpt_base.pth:                      https://drive.google.com/file/d/13oBl5MTVcWER3YU4fSxW3ATlVfueFQPY/view?usp=sharing
+
+   TODO: model loader for trained models
+
+   InSPyReNet_SwinB_HU.pth:            https://drive.google.com/file/d/1HB02tiInEgo-pNzwqyvyV6eSN1Y2xPRJ/view?usp=sharing
+   InSPyReNet_SwinB_DIS5K.pth:         https://drive.google.com/file/d/1aCxHMbhvj8ah77jXVgqvqImQA_Y0G-Yg/view?usp=sharing
+   InSPyReNet_SwinB_Plus_Ultra.pth:    https://drive.google.com/file/d/13oBl5MTVcWER3YU4fSxW3ATlVfueFQPY/view?usp=sharing
 ```
 
 ## note 
