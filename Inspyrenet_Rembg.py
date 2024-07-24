@@ -7,22 +7,26 @@ import os
 
 from folder_paths import models_dir, add_model_folder_path, get_folder_paths
 
+# KEEP Naming convention from https://github.com/plemeri/transparent-background/blob/main/transparent_background/Remover.py
+# ckpt_dir/ckpt_name
+
 # Define the directory for Inspyrenet models
-inspyrinet_dir = os.path.join(models_dir, "inspyrinet")
+ckpt_dir_dir = os.path.join(models_dir, "inspyrinet")
 
 # Ensure the Inspyrenet directory is registered in the paths
 try:
-    if inspyrinet_dir not in get_folder_paths("inspyrinet"):
+    if ckpt_dir not in get_folder_paths("inspyrinet"):
         raise KeyError
 except KeyError:
-    add_model_folder_path("inspyrinet", inspyrinet_dir)
+    add_model_folder_path("inspyrinet", ckpt_dir)
 
 # Check if the inspyrinet_dir exists and is empty
-if not os.path.exists(inspyrinet_dir) or not os.listdir(inspyrinet_dir):
+if not os.path.exists(ckpt_dir) or not os.listdir(ckpt_dir):
     # Ensure the directory exists
-    os.makedirs(inspyrinet_dir, exist_ok=True)
+    os.makedirs(ckpt_dir, exist_ok=True)
 
-ckpt_path = os.path.join(inspyrinet_dir, "ckpt_base.pth")
+# use 
+ckpt_name = os.path.join(ckpt_dir, "ckpt_base.pth")
 
 # Tensor to PIL
 def tensor2pil(image):
@@ -49,9 +53,9 @@ class InspyrenetRemover:
 
     def init_remover(self, torchscript_jit):
         if torchscript_jit == "default":
-            remover = Remover(ckpt=ckpt_path)
+            remover = Remover(ckpt=ckpt_name)
         else:
-            remover = Remover(jit=True, ckpt=ckpt_path,)
+            remover = Remover(jit=True, ckpt=ckpt_name,)
         return (remover,)
 
 
