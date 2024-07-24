@@ -3,7 +3,9 @@ import torch
 import numpy as np
 from transparent_background import Remover
 from tqdm import tqdm
+import os
 
+ckpt_path = os.getenv("INSPY_CKPT", "/workspace/ckpt/ckpt_base.pth")
 
 # Tensor to PIL
 def tensor2pil(image):
@@ -31,12 +33,12 @@ class InspyrenetRemover:
     def init_remover(self, torchscript_jit):
         if torchscript_jit == "default":
             remover = Remover(
-                ckpt="/workspace/transparent_background/ckpt_base.pth"
+                ckpt=ckpt_path
             )
         else:
             remover = Remover(
                 jit=True,
-                ckpt="/workspace/transparent_background/ckpt_base.pth",
+                ckpt=ckpt_path,
             )
         return (remover,)
 
