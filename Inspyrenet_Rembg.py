@@ -11,7 +11,7 @@ from folder_paths import models_dir, add_model_folder_path, get_folder_paths
 # ckpt_dir/ckpt_name
 
 # Define the directory for Inspyrenet models
-ckpt_dir_dir = os.path.join(models_dir, "inspyrinet")
+ckpt_dir = os.path.join(models_dir, "inspyrinet")
 
 # Ensure the Inspyrenet directory is registered in the paths
 try:
