@@ -48,7 +48,7 @@ cd ComfyUI-Inspyrenet-Rembg
 pip install -r requirements.txt
 ```
 
-3. Download models to ComfyUI\models\inspyrinet
+3. Download models to ComfyUI\models\inspyrenet
 
 ```
    ckpt_base.pth:                      https://drive.google.com/file/d/13oBl5MTVcWER3YU4fSxW3ATlVfueFQPY/view?usp=sharing
