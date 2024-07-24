@@ -11,14 +11,14 @@ from folder_paths import models_dir, add_model_folder_path, get_folder_paths
 # ckpt_dir/ckpt_name
 
 # Define the directory for Inspyrenet models
-ckpt_dir = os.path.join(models_dir, "inspyrinet")
+ckpt_dir = os.path.join(models_dir, "inspyrenet")
 
 # Ensure the Inspyrenet directory is registered in the paths
 try:
-    if ckpt_dir not in get_folder_paths("inspyrinet"):
+    if ckpt_dir not in get_folder_paths("inspyrenet"):
         raise KeyError
 except KeyError:
-    add_model_folder_path("inspyrinet", ckpt_dir)
+    add_model_folder_path("inspyrenet", ckpt_dir)
 
 # Check if the inspyrinet_dir exists and is empty
 if not os.path.exists(ckpt_dir) or not os.listdir(ckpt_dir):
