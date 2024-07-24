@@ -32,14 +32,9 @@ class InspyrenetRemover:
 
     def init_remover(self, torchscript_jit):
         if torchscript_jit == "default":
-            remover = Remover(
-                ckpt=ckpt_path
-            )
+            remover = Remover(ckpt=ckpt_path)
         else:
-            remover = Remover(
-                jit=True,
-                ckpt=ckpt_path,
-            )
+            remover = Remover(jit=True, ckpt=ckpt_path,)
         return (remover,)
 
 
