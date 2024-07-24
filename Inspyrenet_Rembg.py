@@ -5,7 +5,24 @@ from transparent_background import Remover
 from tqdm import tqdm
 import os
 
-ckpt_path = os.getenv("INSPY_CKPT", "/workspace/ckpt/ckpt_base.pth")
+from folder_paths import models_dir, add_model_folder_path, get_folder_paths
+
+# Define the directory for Inspyrenet models
+inspyrinet_dir = os.path.join(models_dir, "inspyrinet")
+
+# Ensure the Inspyrenet directory is registered in the paths
+try:
+    if inspyrinet_dir not in get_folder_paths("inspyrinet"):
+        raise KeyError
+except KeyError:
+    add_model_folder_path("inspyrinet", inspyrinet_dir)
+
+# Check if the inspyrinet_dir exists and is empty
+if not os.path.exists(inspyrinet_dir) or not os.listdir(inspyrinet_dir):
+    # Ensure the directory exists
+    os.makedirs(inspyrinet_dir, exist_ok=True)
+
+ckpt_path = os.path.join(inspyrinet_dir, "ckpt_base.pth")
 
 # Tensor to PIL
 def tensor2pil(image):
