@@ -47,9 +47,15 @@ git clone https://github.com/john-mnz/ComfyUI-Inspyrenet-Rembg.git
 cd ComfyUI-Inspyrenet-Rembg
 pip install -r requirements.txt
 ```
-Done!
 
-It downloads the pretrained model automatically at first use
+3. Download models to ComfyUI\models\inspyrinet
+
+```
+   latest.pth (rename to ckpt_base.pth): https://drive.google.com/file/d/13oBl5MTVcWER3YU4fSxW3ATlVfueFQPY/view?usp=sharing
+   InSPyReNet_SwinB_HU:                  https://drive.google.com/file/d/1HB02tiInEgo-pNzwqyvyV6eSN1Y2xPRJ/view?usp=sharing
+   InSPyReNet_SwinB_DIS5K:               https://drive.google.com/file/d/1aCxHMbhvj8ah77jXVgqvqImQA_Y0G-Yg/view?usp=sharing
+   Plus_Ultra:                           https://drive.google.com/file/d/13oBl5MTVcWER3YU4fSxW3ATlVfueFQPY/view?usp=sharing
+```
 
 ## note 
 If torchscript_jif is set to on, it will trace model with pytorch built-in torchscript JIT compiler. May cause delay in initialization, but reduces inference time and gpu memory usage.
