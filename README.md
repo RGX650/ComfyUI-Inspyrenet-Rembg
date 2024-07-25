@@ -48,16 +48,20 @@ cd ComfyUI-Inspyrenet-Rembg
 pip install -r requirements.txt
 ```
 
-3. Download models to ComfyUI\models\inspyrenet
+3. Download models to ComfyUI/models/transparent-background
 
 ```
-   ckpt_base.pth:                      https://drive.google.com/file/d/13oBl5MTVcWER3YU4fSxW3ATlVfueFQPY/view?usp=sharing
+ckpt_base.pth:                      https://drive.google.com/file/d/13oBl5MTVcWER3YU4fSxW3ATlVfueFQPY/view?usp=sharing
 
-   TODO: model loader for trained models
+ckpt_base.pth:                      https://github.com/plemeri/transparent-background/releases/download/1.2.12/ckpt_base.pth
+ckpt_fast.pth:                      https://github.com/plemeri/transparent-background/releases/download/1.2.12/ckpt_fast.pth
+ckpt_base_nightly.pth:              https://github.com/plemeri/transparent-background/releases/download/1.2.12/ckpt_base_nightly.pth
 
-   InSPyReNet_SwinB_HU.pth:            https://drive.google.com/file/d/1HB02tiInEgo-pNzwqyvyV6eSN1Y2xPRJ/view?usp=sharing
-   InSPyReNet_SwinB_DIS5K.pth:         https://drive.google.com/file/d/1aCxHMbhvj8ah77jXVgqvqImQA_Y0G-Yg/view?usp=sharing
-   InSPyReNet_SwinB_Plus_Ultra.pth:    https://drive.google.com/file/d/13oBl5MTVcWER3YU4fSxW3ATlVfueFQPY/view?usp=sharing
+TODO: model loader for trained models
+
+InSPyReNet_SwinB_HU.pth:            https://drive.google.com/file/d/1HB02tiInEgo-pNzwqyvyV6eSN1Y2xPRJ/view?usp=sharing
+InSPyReNet_SwinB_DIS5K.pth:         https://drive.google.com/file/d/1aCxHMbhvj8ah77jXVgqvqImQA_Y0G-Yg/view?usp=sharing
+InSPyReNet_SwinB_Plus_Ultra.pth:    https://drive.google.com/file/d/13oBl5MTVcWER3YU4fSxW3ATlVfueFQPY/view?usp=sharing
 ```
 
 ## note 
