@@ -16,10 +16,10 @@ ckpt_dir = os.path.join(models_dir, "transparent-background")
 
 # Ensure the Inspyrenet directory is registered in the paths
 try:
-    if ckpt_dir not in get_folder_paths("inspyrenet"):
+    if ckpt_dir not in get_folder_paths("transparent-background"):
         raise KeyError
 except KeyError:
-    add_model_folder_path("inspyrenet", ckpt_dir)
+    add_model_folder_path("transparent-background", ckpt_dir)
 
 # Check if the inspyrinet_dir exists and is empty
 if not os.path.exists(ckpt_dir) or not os.listdir(ckpt_dir):
