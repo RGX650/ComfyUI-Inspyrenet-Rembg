@@ -8,10 +8,11 @@ import os
 from folder_paths import models_dir, add_model_folder_path, get_folder_paths
 
 # KEEP Naming convention from https://github.com/plemeri/transparent-background/blob/main/transparent_background/Remover.py
-# ckpt_dir/ckpt_name
+# ckpt_dir\ckpt_name
+# USE 'ComfyUI\models\transparent-background' like https://github.com/chflame163/ComfyUI_LayerStyle#TransparentBackgroundUltra
 
 # Define the directory for Inspyrenet models
-ckpt_dir = os.path.join(models_dir, "inspyrenet")
+ckpt_dir = os.path.join(models_dir, "transparent-background")
 
 # Ensure the Inspyrenet directory is registered in the paths
 try:
